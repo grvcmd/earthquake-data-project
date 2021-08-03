@@ -24,7 +24,10 @@ for earthquake_dict in all_earthquake_dicts:
 data = [{
     'type': 'scattergeo',
     'lon': longitudes,
-    'lat': latitudes
+    'lat': latitudes,
+    'marker': {
+        'size': [5*magnitude for magnitude in magnitudes]
+    }
 }]
 my_layout = Layout(title='Global Earthquakes')
 
