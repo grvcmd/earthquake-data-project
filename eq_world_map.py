@@ -21,7 +21,11 @@ for earthquake_dict in all_earthquake_dicts:
     latitudes.append(latitude)
 
 # Map the earthquakes
-data = [Scattergeo(lon=longitudes, lat=latitudes)]
+data = [{
+    'type': 'scattergeo',
+    'lon': longitudes,
+    'lat': latitudes
+}]
 my_layout = Layout(title='Global Earthquakes')
 
 fig = {'data': data, 'layout': my_layout}
